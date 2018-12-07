@@ -1,6 +1,6 @@
 *{padding:0; margin:0;}
 #section{display:grid;
-grid-template-rows:9vh 206.5vh 8vh;
+grid-template-rows:9vh 520vh 8vh;
 grid-template-areas:"header header"
                     "article article"
                     "footer footer";}
@@ -24,7 +24,8 @@ h1{font-size:5vh;
 p{font-size:3vh;
   font-family:Arial;}
 
-header{margin:0vh 0vh 0vh 18vh;}		
+header{position:relative;
+	   margin:0vh 0vh 0vh 18vh;}		
 header li{display:inline;
           margin:0vh 0vh 0vh 5vh;}
 header ul{margin:0vh;}
@@ -33,14 +34,66 @@ nav{position:fixed;
     background-color:yellow;
     margin:0vh;
     padding:0vh 0vh 100vh 0vh;}
-nav ul{margin:30vh 0vh 0vh 0vh;}
+nav ul{margin:25vh 0vh 0vh 0vh;}
 nav li{font-size:2.5vh;
        margin:10vh 0vh 0vh 0vh;
        font-family:Arial;}
 
-article{margin:1vh 0vh 0vh 18vh;}
+article{position:relative;
+	    margin:1vh 0vh 0vh 18vh;}
 iframe{width:61vh; 
        height:100vh;}
 	   
-footer{margin:1vh 0vh 0vh 18vh;}
+.galeria{margin:.5vw;
+    font-size:0;
+	display:-ms-flexbox;
+	-ms-flexbox-wrap:wrap;
+	-ms-flexbox-direction:column;
+	-webkit-flex-flow:row wrap;
+	flex-flow:row wrap;
+	display:-webkit-box;
+	display:flex;
+}	   
+.galeria div{-webkit-box-flex:auto;
+-ms-flex:auto;
+flex:auto;
+width:200px;
+margin:.5vw;	
+}
+.galeria div img{
+	width:100%;
+	height:auto;
+}
 
+	   
+footer{position:relative;
+	   margin:1vh 0vh 0vh 18vh;}
+
+/*-----------------------breakpoint-----------------------------------*/
+@media(min-width:375px){
+iframe{height:103vh;}
+}
+@media(min-width:1024px){
+iframe{height:148vh;
+width:150vh;}
+header ul{margin:0vh 0vh 0vh 10vh;}
+header li{display:inline;
+          margin:0vh 0vh 0vh 20vh;}
+}
+/*------------------------Galeria-------------------------------------------*/
+@media(max-width:400px){
+	.galeria div{margin:0;}
+	.galeria{padding:0;}
+}
+@media(min-width:1024px){
+	.galeria div{-webkit-box-flex:auto;
+-ms-flex:auto;
+flex:auto;
+width:320px;
+margin:20vh 5vh 0vh 5vh;}
+#section{display:grid;
+grid-template-rows:9vh 400vh 8vh;
+grid-template-areas:"header header"
+                    "article article"
+                    "footer footer";}
+}
