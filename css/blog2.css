@@ -80,7 +80,6 @@ header ul{margin:0vh 0vh 0vh 10vh;}
 header li{display:inline;
           margin:0vh 0vh 0vh 20vh;}
 }
-/*------------------------Galeria-------------------------------------------*/
 @media(max-width:400px){
 	.galeria div{margin:0;}
 	.galeria{padding:0;}
@@ -90,10 +89,11 @@ header li{display:inline;
 -ms-flex:auto;
 flex:auto;
 width:320px;
-margin:20vh 5vh 0vh 5vh;}
+margin:20vh 5vh 0vh 0vh;}
 #section{display:grid;
-grid-template-rows:9vh 400vh 8vh;
+grid-template-rows:9vh 550vh 8vh;
 grid-template-areas:"header header"
                     "article article"
                     "footer footer";}
+h1{font-size:6vh;}
 }
